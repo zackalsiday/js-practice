@@ -218,3 +218,84 @@
 // console.log(sumNums(10))
 // console.log(sumNums(365))
 
+////////////////////////////////////////////////////////
+
+// Define a function `isFactorOf(number, factor)` that returns `true` if `factor`
+// is a factor of `number`. `false` otherwise. A factor is a number that divides
+// another number without a leftover remainder.
+//
+// Examples:
+//
+// isFactorOf(6,2); // => true
+// isFactorOf(-6, 2); // => true
+// isFactorOf(5,0); // => false
+// isFactorOf(22, 7); // => false
+
+
+// function isFactorOf(number, factor){
+//     return number % factor === 0 
+// }
+
+// console.log(isFactorOf(6, 2))
+// console.log(isFactorOf(-6, 2))
+// console.log(isFactorOf(5, 0))
+// console.log(isFactorOf(22, 7))
+
+///////////////////////////////////////////////////////////
+
+// Define a function `fizzBuzz(max)` that takes a number and prints  every number
+// from 0 to `max` that is divisible by either 3 or 5, but not both.
+//
+// Examples:
+//
+// fizzBuzz(20); // prints
+// 3
+// 5
+// 6
+// 9
+// 10
+// 12
+// 18
+
+// function fizzBuzz(max){
+//     for (i = 0; i < max; i++){
+//         if((i % 3 === 0 && i % 5 !== 0) || (i % 3 !== 0 && i % 5 === 0)){
+//             console.log(i)
+//         }
+//     }
+// }
+// console.log(fizzBuzz(20))
+//////////////////////////////////////////////////////////////
+
+// Define a function `isPrime(number)` that returns `true` if `number` is prime.
+// Otherwise, false. Assume `number` is a positive integer.
+//
+// Examples:
+//
+// isPrime(2); // => true
+// isPrime(10); // => false
+// isPrime(11); // => true
+// isPrime(9); // => false
+// isPrime(2017); // => true
+
+// function isPrime(number){
+//     if (number < 2) return false 
+//     // if (number === 2) return true 
+//     for(i = 2; i < number;i++){
+//         console.log(i)
+//         // if (number % i === 0){
+//         //     // return false 
+//         // }
+//     }
+//     // return true 
+// }
+
+// console.log(isPrime(2))
+// console.log(isPrime(10))
+// console.log(isPrime(11))
+// console.log(isPrime(9))
+// console.log(isPrime(2017))
+
+///////////////////////////////////////////////////////
+
+
