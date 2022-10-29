@@ -771,6 +771,88 @@ fromMeToYou('love me or hate me') => 'love you or hate you'
 
 ///////////////////////////////////////////////////////////////////
 
+// Write a function `wordYeller(sentence)` that takes in a sentence string as
+// input. It should return the sentence where every word has an exclamation
+// point behind it, except words that already have punctuation. Punctuation
+// marks are ". , ! ? ; :"
+//
+// Example 1
+// var sent = "Stop it now! Please, wont you stop?";
+// var yelledWords = wordYeller(sent);
+// yelledWords === "Stop! it! now! Please, wont! you! stop?"; // => true
+//
+// Example 2
+// var words = "Go to the store and grab the following: milk, bread, run, and cake";
+// wordYeller(words) === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
+
+// function wordYeller(sentence){
+//     const punc = ['.',',','!','?',';',':']
+//     let sentSplit = sentence.split(' ')
+//     let newSent = []
+//     for (i = 0; i <= sentSplit.length - 1; i++){
+//         if (punc.indexOf(sentSplit[i][sentSplit[i].length - 1]) === -1){
+//             newSent.push(sentSplit[i] + '!')
+//         }else{
+//             newSent.push(sentSplit[i])
+//         }
+//     }
+//     return newSent.join(' ')
+// }
+// console.log(wordYeller("Go to the store and grab the following: milk, bread, run, and cake"))
+
+///////////////////////////////////////////////////////////////////////////
+
+// Write a function `arraySubstring(words, str)` that takes in an array of
+// strings and a string as arguments and returns an array where each element is
+// replaced with true if the string is a substring of the element and false if
+// it is not.
+//
+// Examples:
+//
+// arraySubstring(["hello", "history", "helix", "hellos"],"hel")
+// => [true, false, true, true]
+// arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
+// => [true, false, false, true]
+
+// function arraySubstring(words, str){
+//     let newArr = []
+//     for (i = 0; i <= words.length - 1; i++){
+//         if (words[i].indexOf(str) !== -1){
+//             newArr.push(true)
+//         }else{
+//             newArr.push(false)
+//         }
+//     }
+//     return newArr 
+// }
+
+// console.log(arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre"))
+
+///////////////////////////////////////////////////////////////////////////////////
 
 
+// Write a function evenCaps(sentence) that takes in a sentence as an
+// argument and returns the same string with each even index being
+// capitalized. Index 0 counts as even.
+//
+// Examples:
+//
+// evenCaps("Tom got a small piece of pie")
+// => "ToM GoT A SmAlL PiEcE Of pIe"
+// evenCaps("the book is in front of the table")
+// => "ThE BoOk iS In fRoNt oF ThE TaBlE" 
 
+// function evenCaps(sentence){
+//     let sentSplit = sentence.split('')
+//     let newSent = []
+//     for (i = 0; i <= sentSplit.length - 1;i++){
+//         if (i % 2 === 0){
+//             newSent.push(sentSplit[i].toUpperCase())
+//         }else{
+//             newSent.push(sentSplit[i])
+//         }
+//     }
+//     return newSent.join('')
+// }
+
+// console.log(evenCaps("the book is in front of the table"))
