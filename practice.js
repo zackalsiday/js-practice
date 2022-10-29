@@ -414,7 +414,7 @@
 // maxValue([]); // => null
 // maxValue([-4, -10, 0.43]); // => 0.43 
 
-/
+
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -442,3 +442,96 @@
 // console.log(myIndexOf([5, 6, 7, 8], 2))
 
 ////////////////////////////////////////////////////////////////////
+
+// Write a function `factorArray(array, number)` that takes in an array of
+// numbers and a number and returns an array of all the factors.
+//
+// Examples:
+//
+// factorArray([2,3,4,5,6],20) => [2,4,5]
+// factorArray([2,3,4,5,6],35) => [5]
+// factorArray([10,15,20,25],5) => []
+
+// function factorArray(array, number){
+//     let arr = [];
+//     for (i = 0; i <= array.length; i++){
+//         if (number % array[i] === 0){
+//             arr.push(array[i])
+//         }
+//     }
+//     return arr 
+// }
+
+// console.log(factorArray([10, 15, 20, 25], 5))
+
+///////////////////////////////////////////////////////////////////
+
+/******************************************************************************
+** Write a function average(num1, num2) that returns the average of two numbers.
+**
+** Examples:
+**
+** average(10, 20); // => 15
+** average(5, 7); // => 6
+** average(24, 32); // => 28
+*/
+
+// function average(num1, num2) {
+//     return (num1 + num2) / 2.0 
+// }
+
+// console.log(average(24, 32))
+
+///////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+** Write a function tripler(array) that takes in an array and returns a new array
+** containing 3 times every element of the original array.
+**
+** Examples:
+**
+** tripler([1,2,3]); // => [ 3, 6, 9 ]
+** tripler([4, 1, 7]); // => [ 12, 3, 21 ]
+*/
+
+// function tripler(array) {
+//     let newArr = [];
+//     for (i = 0; i <= array.length - 1; i++){
+//         newArr.push(array[i] * 3)
+//     }
+//     return newArr
+// }
+
+// console.log(tripler([4, 1, 7]))
+
+//////////////////////////////////////////////////////////////
+
+
+
+/******************************************************************************
+** Write a function oddRange(end) that takes in a number and returns an array containing
+** all positive odd numbers up to `end`.
+**
+** Examples:
+**
+** oddRange(13); // => [ 1, 3, 5, 7, 9, 11, 13 ]
+** oddRange(6); // => [ 1, 3, 5 ]
+*/
+
+// function oddRange(end) {
+//     let newArr = [];
+//     for (i = 1; i <= end; i++){
+//         if (i % 2 !== 0){
+//             newArr.push(i)
+//         }
+//     }
+//     return newArr
+// }
+
+// console.log(oddRange(6))
+
+
+//////////////////////////////////////////////////////////////
+
+
+
