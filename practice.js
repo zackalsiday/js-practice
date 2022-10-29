@@ -533,5 +533,143 @@
 
 //////////////////////////////////////////////////////////////
 
+/*******************************************************************************
+Write a function reverseOddRange(start, end) that returns an array containing all
+odd numbers between 'start' and 'end'  in reverse-sequential order. Use a
+loop to do this.
 
+Examples:
+
+reverseOddRange(10, 20) => [ 19, 17, 15, 13, 11 ]
+reverseOddRange(3, 7) => [ 7, 5, 3 ]
+reverseOddRange(9, 5) => []
+*******************************************************************************/
+
+// function reverseOddRange(start, end) {
+//     let newArr = []
+//     if (end < start) return newArr 
+//     for (i = end; i >= start; i-- ){
+//         if (i % 2 !== 0){
+//             newArr.push(i)
+//         }
+//     }
+//     return newArr
+// }
+
+// console.log(reverseOddRange(9, 5))
+
+//////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function isSquare(number) that takes in a number and returns true if the
+number is a perfect square, false otherwise. A perfect square is a number that is
+the result of squaring another number. For example, 3 * 3 is 9, so 9 is perfect
+square. 4 * 4 is 16, so 16 is a perfect square. 18 is not a perfect square.
+
+Examples:
+
+isSquare(7) => false
+isSquare(15) => false
+isSquare(18) => false
+isSquare(25) => true
+isSquare(36) => true
+isSquare(9) => true
+isSquare(16) => true
+*******************************************************************************/
+
+// function isSquare(number) {
+//     for (i = 1; i <= number; i++){
+//         if(i * i === number){
+//             return true
+//         }else if(i * i > number){
+//             return false 
+//         }
+//     }
+//     return false 
+// }
+
+// console.log(isSquare(7))
+// console.log(isSquare(15))
+// console.log(isSquare(18))
+// console.log(isSquare(25))
+// console.log(isSquare(36))
+// console.log(isSquare(9))
+// console.log(isSquare(16))
+
+//////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function mysticNumbers(max) that returns an array of numbers less than `max`.
+Each number should be either divisible by 4 or 6, BUT NOT BOTH. The numbers
+should be in reverse-sequential order.
+
+Examples:
+
+mysticNumbers(25) => [ 20, 18, 16, 8, 6, 4 ]
+mysticNumbers(14) => [ 8, 6, 4 ]
+*******************************************************************************/
+
+// function mysticNumbers(max) {
+//     let newArr = [];
+//     for (i = max - 1; i >= 1; i--){
+//         if ((i % 4 === 0 && i % 6 !== 0) || (i % 4 !== 0 && i % 6 === 0) ){
+//             newArr.push(i)
+//         }
+//     }
+//     return newArr
+// }
+
+// console.log(mysticNumbers(14))
+
+////////////////////////////////////////////////////////////////////////////
+
+/******************************************************************************
+Write a function firstOrLast(array) that takes in an array and returns either:
+
+- the first element if there is an even number of elements in the array
+
+- the last element if there is an odd number of elemetns in the array
+
+You can assume the array contains at least one element.
+
+Examples:
+
+firstOrLast(['a', 'b', 'c', 'd']) => 'a'
+firstOrLast(['Jenny', 'Mary', 'Mark']) => 'Mark'
+*******************************************************************************/
+
+// function firstOrLast(array) {
+//     return array.length % 2 === 0 ? array[0] : array[array.length - 1]
+// }
+
+// console.log(firstOrLast(['Jenny', 'Mary', 'Mark']))
+
+/////////////////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function fromMeToYou(sentence) that returns an string where the word 'me'
+is replaced with 'you'.
+
+Examples:
+
+fromMeToYou('that made me laugh') => 'that made you laugh'
+fromMeToYou('love me or hate me') => 'love you or hate you'
+*******************************************************************************/
+
+// function fromMeToYou(sentence) {
+//     let splitSent = sentence.split(' ')
+//     let newSent = []
+//     for (i = 0; i <= splitSent.length - 1; i++){
+//         if (splitSent[i] === 'me'){
+//             newSent.push('you')
+//         }else{
+//             newSent.push(splitSent[i])
+//         }
+//     }
+//     return newSent.join(' ')
+// }
+
+// console.log(fromMeToYou('love me or hate me'))
+
+//////////////////////////////////////////////////////////////////////////////
 
