@@ -976,3 +976,27 @@ abbreviate('how are you'); // => 'how are you'
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+/***********************************************************************
+Write a function `firstLastCap(sentence)` that takes in a sentence and
+returns a new sentence where the first and last letters of each word is
+uppercase. All other characters should be lowercase.
+
+Examples:
+
+firstLastCap('hello BOOTCAMP PrEp'); // =>'HellO BootcamP PreP'
+firstLastCap('what is on the radio'); // =>'WhaT IS ON ThE RadiO'
+***********************************************************************/
+
+function firstLastCap(sentence) {
+    let lowerSentence = sentence.toLowerCase().split(' ')
+    let newSent = []
+    for (i = 0; i <= lowerSentence.length - 1;i++){
+        let first = lowerSentence[i][0].toUpperCase() + lowerSentence[i].slice(1, -1) + lowerSentence[i][lowerSentence[i].length - 1].toUpperCase()
+        newSent.push(first)
+    }
+    return newSent.join(' ')
+}
+
+console.log(firstLastCap('what is on the radio'))
+
+
