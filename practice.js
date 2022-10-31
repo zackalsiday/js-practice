@@ -1396,3 +1396,102 @@ peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5]); //=> [2, 6, 8]
 // console.log(peakFinder([2, 1, 2, 3, 4, 5])); //=> [0, 5]
 // console.log(peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5])); //=> [2, 6, 8]
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `divisibleByThreePairSum(array)` that takes an array of
+numbers. It should return an array of all the pairs of indices, whose
+elements sum to a multiple of three.
+Examples:
+var arr1 = divisibleByThreePairSum([1, 6, 3, 4, 2, 0]);
+arr1 //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
+var arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]);
+arr2 //=> [[1, 3]]
+***********************************************************************/
+
+// function divisibleByThreePairSum(array) {
+//     let newArr = [];
+//     for (var a = 0; a <= array.length -2; a++){
+//         for( var b = a + 1; b <= array.length -1; b ++ ){
+//             if ((array[a] + array[b]) % 3 === 0){
+//                 newArr.push([a,b])
+//             }
+//         }
+//     }
+//     return newArr 
+// }
+
+// var arr1 = divisibleByThreePairSum([1, 6, 3, 4, 2, 0]);
+// console.log(arr1) //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
+// var arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]);
+// console.log(arr2) //=> [[1, 3]]
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `zipArray(arr1, arr2)` that takes in two arrays and
+"zips" them together by returning a single 2D-array. Assume that both
+input arrays have the same length.
+Examples:
+var a1 = ['a', 'b', 'c', 'd'];
+var a2 = [10, 20, 30, 40];
+var result = zipArray(a1, a2);
+result; // => [ [ 'a', 10 ], [ 'b', 20 ], [ 'c', 30 ], [ 'd', 40 ] ]
+***********************************************************************/
+
+// function zipArray(arr1, arr2) {
+//     let newArr = [];
+//     for (var i = 0; i <= arr1.length - 1; i++){
+//         newArr.push([arr1[i], arr2[i]])
+//     }
+//     return newArr 
+// }
+
+// var a1 = ['a', 'b', 'c', 'd'];
+// var a2 = [10, 20, 30, 40];
+// var result = zipArray(a1, a2);
+// console.log(result); // => [ [ 'a', 10 ], [ 'b', 20 ], [ 'c', 30 ], [ 'd', 40 ] ]
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `twoDimensionalTotal(array)` that takes in a 2D array
+of numbers and returns the total sum of all elements.
+var arr1 = [
+  [5, 2, 5, 3],
+  [12, 13],
+];
+twoDimensionalTotal(arr1); // => 40
+var arr2 = [
+  [2],
+  [1, 9],
+  [1, 1, 1]
+]
+twoDimensionalTotal(arr2); // => 15
+***********************************************************************/
+
+// function twoDimensionalTotal(array) {
+//     let sum = 0;
+//     for(var a = 0; a <= array.length - 1; a++){
+//         for (var b = 0; b <= array[a].length -1; b++){
+//             sum += array[a][b]
+//         }
+//     }
+//     return sum 
+// }
+
+// var arr1 = [
+//     [5, 2, 5, 3],
+//     [12, 13],
+// ];
+// console.log(twoDimensionalTotal(arr1)); // => 40
+// var arr2 = [
+//     [2],
+//     [1, 9],
+//     [1, 1, 1]
+// ]
+// console.log(twoDimensionalTotal(arr2)); // => 15
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
