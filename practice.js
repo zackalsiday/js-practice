@@ -1602,3 +1602,35 @@ Note: Assume both arrays have unique elements.
 // array3 = ['a', 'ab', 'c', 'd', 'c']
 // array4 = ['d']
 // console.log(arrayDiff(array3, array4)) // => ['a', 'ab', 'c', 'c']
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `valueCounter(obj, val)` that takes in an object and a 
+value, the function should return the number of times 'val' repeats as a
+value in 'obj'.
+//Example:
+// obj1 = {1: 'Anne', 2: 'Alvin', 3: 'Anne', 4: 'Anne'}
+// valueCounter(obj1, 'Anne') // => 3
+// obj2 = {Anne: 50, Alvin: 1, JJ: 100, Roman: 100}
+// valueCounter(obj2, 88) // => 0
+// pairs = {Anne: 'Roman', Alvin: 'Roman', JJ: 'Anne', Roman: 'Anne'}
+// valueCounter(pairs, 'Roman') // => 2
+***********************************************************************/
+
+function valueCounter(obj, val) {
+    let counter = 0;
+    for (keys in obj){
+        if (obj[keys] === val){
+            counter += 1
+        }
+    }
+    return counter 
+}
+
+obj1 = {1: 'Anne', 2: 'Alvin', 3: 'Anne', 4: 'Anne'}
+console.log(valueCounter(obj1, 'Anne')) // => 3
+obj2 = {Anne: 50, Alvin: 1, JJ: 100, Roman: 100}
+console.log(valueCounter(obj2, 88)) // => 0
+pairs = {Anne: 'Roman', Alvin: 'Roman', JJ: 'Anne', Roman: 'Anne'}
+console.log(valueCounter(pairs, 'Roman')) // => 2
