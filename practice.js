@@ -1541,3 +1541,64 @@ how many times each element in each sub array repeats.
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/***********************************************************************
+Write a function `twoDiff(array)`, given an array of numbers, return a 2-D 
+array, where each of the sub array are indices of the two numbers such 
+that their difference is 2. If there are no such numbers, return an empty
+array.
+NOTE: The pairs are unique.
+HINT: Account for negative difference too!
+//Example:
+// twoDiff([2, 3, 4, 6, 1, 7]) // => [[0, 2], [1, 4], [2, 3]]
+// twoDiff([0, 2, 4, 3, 5]) // => [[0, 1], [1, 2], [3,4]]
+// twoDiff([]) // => []
+***********************************************************************/
+
+
+// function twoDiff(array) {
+//     let newArr = [];
+//     for (var a = 0; a <= array.length - 2; a++){
+//         for (var b = a + 1; b <= array.length -1; b++){
+//             if ((array[a] - array[b] === 2) || (array[a] - array[b] === -2)){
+//                 newArr.push([a,b])
+//             }
+//         }
+//     }
+//     return newArr 
+// }
+
+// console.log(twoDiff([2, 3, 4, 6, 1, 7])) // => [[0, 2], [1, 4], [2, 3]]
+// console.log(twoDiff([0, 2, 4, 3, 5])) // => [[0, 1], [1, 2], [3,4]]
+// console.log(twoDiff([])) // => []
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `arrayDiff(arr1, arr2)` that takes in two arrays. The 
+function should return a new array, containing the elements of arr1 that
+are not also in arr2.
+Note: Assume both arrays have unique elements.
+//Example:
+// array1 = [1,23,2,43,3,4]
+// array2 = [3, 23]
+// arrayDiff(array1, array2) // => [1, 2, 43 ,4]
+// array3 = ['a', 'ab', 'c', 'd', 'c']
+// array4 = ['d']
+// arrayDiff(array3, array4) // => ['a', 'ab', 'c', 'c']
+***********************************************************************/
+
+
+// function arrayDiff(arr1, arr2) {
+//     let newArr = [];
+//     for (var i = 0; i <= arr1.length - 1; i++){
+//         if (arr2.indexOf(arr1[i]) === -1) newArr.push(arr1[i])
+//     }
+//     return newArr 
+// }
+
+// array1 = [1,23,2,43,3,4]
+// array2 = [3, 23]
+// console.log(arrayDiff(array1, array2)) // => [1, 2, 43 ,4]
+// array3 = ['a', 'ab', 'c', 'd', 'c']
+// array4 = ['d']
+// console.log(arrayDiff(array3, array4)) // => ['a', 'ab', 'c', 'c']
