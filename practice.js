@@ -1301,15 +1301,15 @@ isPrime(15); // => false
 isPrime(303212); // => false
 ***********************************************************************/
 
-function isPrime(number) {
-    if (number < 2 ) return false 
-    for (var i = 2; i < number; i++){
-        if (number % i === 0){
-            return false 
-        }
-    }
-    return true 
-}
+// function isPrime(number) {
+//     if (number < 2 ) return false 
+//     for (var i = 2; i < number; i++){
+//         if (number % i === 0){
+//             return false 
+//         }
+//     }
+//     return true 
+// }
 
 // console.log(isPrime(2)); // => true
 // console.log(isPrime(1693)); // => true
@@ -1327,17 +1327,17 @@ firstNPrimes(1); // => [2]
 firstNPrimes(4); // => [2, 3, 5, 7]
 ***********************************************************************/
 
-function firstNPrimes(n) {
-    let arr = [];
-    for (var a = 0; arr.length < n; a++){
-        if (isPrime(a)) arr.push(a)
-    }
-    return arr 
-}
+// function firstNPrimes(n) {
+//     let arr = [];
+//     for (var i = 0; arr.length < n; i++){
+//         if (isPrime(i)) arr.push(i)
+//     }
+//     return arr 
+// }
 
-console.log(firstNPrimes(0)); // => []
-console.log(firstNPrimes(1)); // => [2]
-console.log(firstNPrimes(4)); // => [2, 3, 5, 7]
+// console.log(firstNPrimes(0)); // => []
+// console.log(firstNPrimes(1)); // => [2]
+// console.log(firstNPrimes(4)); // => [2, 3, 5, 7]
 
 /***********************************************************************
 Using `firstNPrimes`, write a function `sumOfNPrimes(n)` that returns
@@ -1350,6 +1350,49 @@ sumOfNPrimes(1); // => 2
 sumOfNPrimes(4); // => 17
 ***********************************************************************/
 
-function sumOfNPrimes(n) {
+// function sumOfNPrimes(n) {
+//     let arrOfPrimes = firstNPrimes(n)
+//     let sum = 0;
+//     for ( var i = 0; i <= arrOfPrimes.length - 1;i++){
+//         sum += arrOfPrimes[i]
+//     }
+//     return sum 
+// }
 
-}
+// console.log(sumOfNPrimes(0)); // => 0
+// console.log(sumOfNPrimes(1)); // => 2
+// console.log(sumOfNPrimes(4)); // => 17
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `peakFinder(array)` that takes in an array of numbers.
+It should return an array containing the indices of all the peaks. A
+peak is an element that is greater than both of its neighbors. If it is
+the first or last element, it is a peak if it is greater than its one
+neighbor. Assume the array has a length of at least 2.
+Hint: this can be solved using a single loop
+Examples:
+peakFinder([1, 2, 3, 2, 1]); //=> [2]
+peakFinder([2, 1, 2, 3, 4, 5]); //=> [0, 5]
+peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5]); //=> [2, 6, 8]
+***********************************************************************/
+
+// function peakFinder(array) {
+//     let arr = [];
+//     for (var i = 0; i <= array.length - 1; i++){
+//         if (i === 0 && (array[0] > array[1])){
+//             arr.push(0)
+//         } else if (i === array.length - 1 && array[array.length - 1] > array[array.length - 2]){
+//             arr.push(array.length - 1)
+//         } else if (array[i] > array[i + 1] && array[i] > array[i - 1] ){
+//             arr.push(i)
+//         }
+//     }
+//     return arr 
+// }
+
+// console.log(peakFinder([1, 2, 3, 2, 1])); //=> [2]
+// console.log(peakFinder([2, 1, 2, 3, 4, 5])); //=> [0, 5]
+// console.log(peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5])); //=> [2, 6, 8]
+
