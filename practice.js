@@ -2095,23 +2095,53 @@ phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') => false
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// function recusionCounter(num){
-//     console.log(num)
-//     let updatedNum = num + 1
-//     if (updatedNum <= 10) recusionCounter(updatedNum)
+/*******************************************************************************
+Write a function that multiples(max, num) that takes in two numbers. The function
+should return an array of positive numbers less than `max` that are multiples of `num`.
+
+Examples:
+
+multiples(10, 2) => [ 2, 4, 6, 8 ]
+multiples(15, 3) => [ 3, 6, 9, 12 ]
+*******************************************************************************/
+
+// function multiples(max, num) {
+//     let newArr = [];
+//     for (i = num; i < max; i += num){
+//             newArr.push(i)
+//     }
+//     return newArr 
 // }
 
-// console.log(recusionCounter(1))
+// console.log(multiples(10, 2))
+// console.log(multiples(15, 3) )
 
-function range(x,y){ 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function valueReplace(array, object) that takes in an array and an object.
+The function should return a new array where each element of the original array
+is replaced with it's corresponding value from the object.
+
+Examples:
+
+valueReplace(['a', 'b', 'c', 'd'], {a: 1, b: 2, d: 4})
+=> [ 1, 2, 'c', 4 ]
+
+valueReplace(['danny', 'kurstie', 'tommy'], {kurstie: 'operations', danny: 'placements'})
+=> [ 'placements', 'operations', 'tommy' ]
+*******************************************************************************/
+
+function valueReplace(array, obj) {
     let newArr = []
-    let start = x + 1 
-    newArr.push(start)
-    console.log(newArr)
- 
-    let currentNum = start  
-    if (currentNum < y - 1) range(currentNum, y) 
-    
+    for (var i = 0; i <= array.length - 1;i++){
+        if (obj[array[i]]){
+            newArr.push(obj[array[i]])
+        }else{
+            newArr.push(array[i])
+        }
+    }
+    return newArr 
 }
-
-console.log(range(2,9))
+console.log(valueReplace(['a', 'b', 'c', 'd'], { a: 1, b: 2, d: 4 }))
+console.log(valueReplace(['danny', 'kurstie', 'tommy'], { kurstie: 'operations', danny: 'placements' }))
