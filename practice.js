@@ -1854,18 +1854,47 @@ titleize("shall we dance?", ["dance"])
 //
 // fizzBuzz(19) //=> [3, 5, 6, 9, 10, 12, 18]
 
-function fizzBuzz(max) {
-    var i = 1;
-    var array = [];
+// function fizzBuzz(max) {
+//     var i = 1;
+//     var array = [];
 
-    while (i < max) {
-        if ((i % 5 === 0 || i % 3 === 0 ) && i !== 15) {
-            array.push(i);
-        }
-        i += 1;
-    }
+//     while (i < max) {
+//         if ((i % 5 === 0 || i % 3 === 0 ) && i !== 15) {
+//             array.push(i);
+//         }
+//         i += 1;
+//     }
 
-    return array;
-}
+//     return array;
+// }
 
-console.log(fizzBuzz(19))
+// console.log(fizzBuzz(19))
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/***********************************************************************
+Write a function called capVowels(string) that takes in a string and
+returns the string where every vowel is capitalized. All other letters
+should be lowercased.
+Hint: Don't forget that strings are immutable!
+Examples:
+capVowels('hello world'); // => 'hEllO wOrld'
+capVowels('HELLO WORLD'); // => 'hEllO wOrld'
+capVowels('boOtCamP PreP'); // => 'bOOtcAmp prEp'
+***********************************************************************/
+
+// function capVowels(string) {
+//     const vowels = 'aeiou'.split('')
+//     const splitString = string.toLowerCase()
+//     let newStr = ''
+//     for (i = 0; i <= splitString.length - 1; i++){
+//         let character = splitString[i]
+//         vowels.indexOf(character) === -1 ? newStr += character : newStr += character.toUpperCase()
+//     }
+//     return newStr 
+// }
+
+// console.log(capVowels('hello world')); // => 'hEllO wOrld'
+// console.log(capVowels('HELLO WORLD')); // => 'hEllO wOrld'
+// console.log(capVowels('boOtCamP PreP')); // => 'bOOtcAmp prEp'
