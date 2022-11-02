@@ -2132,16 +2132,73 @@ valueReplace(['danny', 'kurstie', 'tommy'], {kurstie: 'operations', danny: 'plac
 => [ 'placements', 'operations', 'tommy' ]
 *******************************************************************************/
 
-function valueReplace(array, obj) {
-    let newArr = []
-    for (var i = 0; i <= array.length - 1;i++){
-        if (obj[array[i]]){
-            newArr.push(obj[array[i]])
-        }else{
-            newArr.push(array[i])
-        }
+// function valueReplace(array, obj) {
+//     let newArr = []
+//     for (var i = 0; i <= array.length - 1;i++){
+//         if (obj[array[i]]){
+//             newArr.push(obj[array[i]])
+//         }else{
+//             newArr.push(array[i])
+//         }
+//     }
+//     return newArr 
+// }
+// console.log(valueReplace(['a', 'b', 'c', 'd'], { a: 1, b: 2, d: 4 }))
+// console.log(valueReplace(['danny', 'kurstie', 'tommy'], { kurstie: 'operations', danny: 'placements' }))
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/***********************************************************************
+Write a function `longWordCount(string)` that takes in a string and
+returns the number of words longer than 7 characters.
+Examples:
+longWordCount(""); // => 0
+longWordCount("short words only"); // => 0
+longWordCount("one reallylong word"); // => 1
+longWordCount("two reallylong words inthisstring"); // => 2
+longWordCount("allwordword longwordword wordswordword"); // => 3
+longWordCount("seventy schfifty five"); // => 1
+***********************************************************************/
+
+// function longWordCount(sentence) {
+//     let newSent = sentence.split(' ')
+//     counter = 0;
+//     for (var i = 0; i <= newSent.length - 1; i++ ){
+//         if (newSent[i].length > 7)  counter += 1 
+//     }
+//     return counter 
+// }
+
+// console.log(longWordCount("")); // => 0
+// console.log(longWordCount("short words only")); // => 0
+// console.log(longWordCount("one reallylong word")); // => 1
+// console.log(longWordCount("two reallylong words inthisstring")); // => 2
+// console.log(longWordCount("allwordword longwordword wordswordword")); // => 3
+// console.log(longWordCount("seventy schfifty five")); // => 1
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `factorial(n)`, that returns the factorial of the
+number `n`. For example, the factorial of 4 is `4 * 3 * 2 * 1 = 24`.
+Examples:
+factorial(1); // => 1
+factorial(4); // => 24
+factorial(5); // => 120
+factorial(10); // => 3628800
+***********************************************************************/
+
+function factorial(n) {
+    let total = 1;
+    for (var i = n; i >= 1; i--){
+        total *= i 
     }
-    return newArr 
+    return total 
 }
-console.log(valueReplace(['a', 'b', 'c', 'd'], { a: 1, b: 2, d: 4 }))
-console.log(valueReplace(['danny', 'kurstie', 'tommy'], { kurstie: 'operations', danny: 'placements' }))
+
+console.log(factorial(1)); // => 1
+console.log(factorial(4)); // => 24
+console.log(factorial(5)); // => 120
+console.log(factorial(10)); // => 3628800
