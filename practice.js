@@ -2190,15 +2190,130 @@ factorial(5); // => 120
 factorial(10); // => 3628800
 ***********************************************************************/
 
-function factorial(n) {
-    let total = 1;
-    for (var i = n; i >= 1; i--){
-        total *= i 
-    }
-    return total 
-}
+// function factorial(n) {
+//     let total = 1;
+//     for (var i = n; i >= 1; i--){
+//         total *= i 
+//     }
+//     return total 
+// }
 
-console.log(factorial(1)); // => 1
-console.log(factorial(4)); // => 24
-console.log(factorial(5)); // => 120
-console.log(factorial(10)); // => 3628800
+// console.log(factorial(1)); // => 1
+// console.log(factorial(4)); // => 24
+// console.log(factorial(5)); // => 120
+// console.log(factorial(10)); // => 3628800
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `lcm(num1, num2)` that returns the lowest number which
+is a multiple of both num1 and num2.
+Examples:
+lcm(2, 3); // => 6
+lcm(6, 10); // => 30
+lcm(24, 26); // => 312
+***********************************************************************/
+
+// function lcm(num1, num2) {
+//     let start = Math.max(num1, num2)
+//     for (i = start; i <= (num1 * num2); i++){
+//         if (i % num1 === 0 && i % num2 === 0){
+//             return i 
+//         }
+//     }
+// }
+
+// console.log(lcm(2, 3)); // => 6
+// console.log(lcm(6, 10)); // => 30
+// console.log(lcm(24, 26)); // => 312
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/***********************************************************************
+Write a function `hipsterfy(sentence)` that takes takes a string
+containing several words as input. Remove the last vowel from each word.
+`'y'` is not a vowel.
+Examples:
+hipsterfy("proper"); // => "propr"
+hipsterfy("proper tonic panther"); // => "propr tonc panthr"
+hipsterfy("towel flicker banana"); // => "towl flickr banan"
+hipsterfy("runner anaconda"); // => "runnr anacond"
+hipsterfy("turtle cheeseburger fries"); // => "turtl cheeseburgr fris"
+***********************************************************************/
+
+// function hipsterfy(sentence) {
+//     let newSent = sentence.split(' ')
+//     let final = []
+//     for (var i = 0; i <= newSent.length - 1;i++){
+//         final.push(removeLastv(newSent[i]))
+//     }
+//     return final.join(' ')
+// }
+
+// function removeLastv(word){
+//     let vowels = 'aeiou'.split('')
+//     for (var i = word.length - 1; i >= 0;i--){
+//         if (vowels.indexOf(word[i]) != -1 ){
+//             return word.replace(word[i], '')
+//         }
+//     }
+//     return word 
+// }
+
+// console.log(hipsterfy("proper")); // => "propr"
+// console.log(hipsterfy("proper tonic panther")); // => "propr tonc panthr"
+// console.log(hipsterfy("towel flicker banana")); // => "towl flickr banan"
+// console.log(hipsterfy("runner anaconda")); // => "runnr anacond"
+// console.log(hipsterfy("turtle cheeseburger fries")); // => "turtl cheeseburgr fris"console.log(
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function `objectToString(count)` that takes in a char count object and
+returns a string representing the counts of each character.
+
+Examples:
+
+objectToString({a : 2, b: 4, c: 1}) => 'aabbbbc'
+objectToString({b: 1, o: 2, t: 1}) => 'boot'
+*******************************************************************************/
+
+// function objectToString(count) {
+//     let str = '';
+//     for (key in count ){
+//         for( var i = 1; i <= count[key]; i++){
+//             str += key
+//         }
+//     }
+//     return str 
+// }
+
+// console.log(objectToString({ a: 2, b: 4, c: 1 }))
+// console.log(objectToString({ b: 1, o: 2, t: 1 }) )
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function shortestWord(sentence) that returns the shortest word of a sentence.
+You can assume that the words of the sentence all have different lengths.
+
+Examples:
+
+shortestWord('app academy is cool') => 'is'
+shortestWord('bootcamp prep') => 'prep'
+*******************************************************************************/
+
+// function shortestWord(sentence) {
+//     let splitSent = sentence.split(' ')
+//     let final = splitSent[0]
+//     for (var i = 0; i <= splitSent.length -1 ;i++){
+//         if (splitSent[i].length < final.length  ){
+//             final = splitSent[i]
+//         }
+//     }
+//     return final 
+// }
+
+// console.log(shortestWord('app academy is cool'))
+// console.log(shortestWord('bootcamp prep'))
