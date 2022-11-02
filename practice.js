@@ -1732,4 +1732,23 @@ titleize("shall we dance?", ["dance"])
 // console.log(titleize("shall we dance?", ["dance"]))
 // // => "Shall We dance?"
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+// Debug this function below so it passes mocha
+
+// Examples:
+//
+// jump(5) //=> "I'm jumping 5 feet high!";
+// jump(12) //=> "I'm jumping 12 feet high!";
+
+function howHigh(height) {
+    return height + " feet high!"; // "4 feet high!""
+}
+
+function jump(height) {
+    return "I'm jumping " + howHigh(height); // "I'm jumping 4 feet high!"
+}
+
+console.log(jump(5))
+console.log(jump(12))
