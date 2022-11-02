@@ -1782,43 +1782,65 @@ titleize("shall we dance?", ["dance"])
 
 // Examples:
 //
-var people = [
-  { happiness : 15},
-  { happiness : 13},
-  { happiness : 3},
-  { happiness : 20},
-  { happiness : 9},
-  { happiness : 7},
-  { happiness : 17},
-  { happiness : 1}
-];
+// var people = [
+//   { happiness : 15},
+//   { happiness : 13},
+//   { happiness : 3},
+//   { happiness : 20},
+//   { happiness : 9},
+//   { happiness : 7},
+//   { happiness : 17},
+//   { happiness : 1}
+// ];
 
-console.log(isHappyGroup(people)) //=> true;
+// console.log(isHappyGroup(people)) //=> true;
 
-function isHappy(person) {
-    if (person.happiness > 5) {
-        return true;
-    }
-    return false;
-}
+// function isHappy(person) {
+//     if (person.happiness > 5) {
+//         return true;
+//     }
+//     return false;
+// }
 
-function isHappyGroup(group) {
-    var amount = 0;
+// function isHappyGroup(group) {
+//     var amount = 0;
 
-    for (var i = 0; i <= group.length - 1; i += 1) {
-        var person = group[i];
+//     for (var i = 0; i <= group.length - 1; i += 1) {
+//         var person = group[i];
 
-        if (isHappy(person)) {
-            amount += 1;
-        }
-    }
+//         if (isHappy(person)) {
+//             amount += 1;
+//         }
+//     }
 
-    if (amount > 5) {
-        return true;
-    }
+//     if (amount > 5) {
+//         return true;
+//     }
 
-    return false;
-}
+//     return false;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+// Debug this function below so it passes mocha
 
+// Examples:
+//
+
+
+// var magicify = function (number) {
+//     return number - 34;
+// }
+
+// var isMagicNumer = function (number) {
+//     var magicNumb = magicify(number);
+
+//     if (magicNumb % 13 === 0 || magicNumb < 0) {
+//         return true;
+//     }
+
+//     return false;
+// }
+// console.log(isMagicNumer(26)) //=> true;
+// console.log(isMagicNumer(50)) //=> false;
