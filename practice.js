@@ -1936,3 +1936,38 @@ nextTwoPrimes(97); // => [ 101, 103 ]
 // console.log(nextTwoPrimes(8)); // => [ 11, 13 ]
 // console.log(nextTwoPrimes(20)); // => [ 23, 29 ]
 // console.log(nextTwoPrimes(97)); // => [ 101, 103 ]
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/***********************************************************************
+Write a function `pairProduct(arr, num)` that accepts an array of
+numbers (arr) and a target number (num). It should return pairs of
+indices whose elements multiply to `num`. No pair should appear twice in
+the result.
+Use only `while` loops. No `for` loops.
+Examples:
+pairProduct([1,2,3,4,5], 4); //=> [ [ 0, 3 ] ]
+pairProduct([1,2,3,4,5], 8); //=> [ [ 1, 3 ] ]
+pairProduct([1, 2, 3, 12, 8], 24); //=> [ [ 1, 3 ], [ 2, 4 ] ]
+***********************************************************************/
+
+function pairProduct(arr, num) {
+    let newArr = [];
+    let a = 0;
+    while (a <= arr.length - 2){
+        b = a + 1
+        while (b <= arr.length -1){
+            if ((arr[a] * arr[b]) === num ){
+                newArr.push([a,b])
+            }
+            b += 1
+        }
+        a += 1
+    }
+    return newArr 
+}
+
+console.log(pairProduct([1, 2, 3, 4, 5], 4)); //=> [ [ 0, 3 ] ]
+console.log(pairProduct([1, 2, 3, 4, 5], 8)); //=> [ [ 1, 3 ] ]
+console.log(pairProduct([1, 2, 3, 12, 8], 24)); //=> [ [ 1, 3 ], [ 2, 4 ] ]
