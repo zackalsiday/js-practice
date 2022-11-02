@@ -2038,3 +2038,23 @@ isElement(["a", "b", "c"], "d") => false
 // console.log(isElement([1, 2, 3, 4, 5], 5))
 // console.log(isElement(["a", "b", "c"], "a"))
 // console.log(isElement(["a", "b", "c"], "d"))
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function `minMaxProduct(array)` that return the product between the
+largest value and the smallest value in the array. Assume `array` is an array of
+numbers. Assume an array of at least two numbers.
+
+Examples:
+
+minMaxProduct([6, 3, 7, 2]) => 14
+minMaxProduct([0, 1, -5, 3, 6]) => -30
+*******************************************************************************/
+
+function minMaxProduct(array) {
+    return Math.min(...array) * Math.max(...array)
+}
+
+console.log(minMaxProduct([6, 3, 7, 2]))
+console.log(minMaxProduct([0, 1, -5, 3, 6]))
