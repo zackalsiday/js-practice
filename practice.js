@@ -1742,13 +1742,36 @@ titleize("shall we dance?", ["dance"])
 // jump(5) //=> "I'm jumping 5 feet high!";
 // jump(12) //=> "I'm jumping 12 feet high!";
 
-function howHigh(height) {
-    return height + " feet high!"; // "4 feet high!""
-}
+// function howHigh(height) {
+//     return height + " feet high!"; // "4 feet high!""
+// }
 
-function jump(height) {
-    return "I'm jumping " + howHigh(height); // "I'm jumping 4 feet high!"
-}
+// function jump(height) {
+//     return "I'm jumping " + howHigh(height); // "I'm jumping 4 feet high!"
+// }
 
-console.log(jump(5))
-console.log(jump(12))
+// console.log(jump(5))
+// console.log(jump(12))
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Debug this function below so it passes mocha
+
+// Examples:
+//
+// unique([1,23,2,4,5,1,23]) //=> [1, 23, 2, 4, 5];
+
+function unique(array) {
+    var uniqueArray = [];
+
+    for (var i = 0; i <= array.length -1; i += 1) {
+        var ele = array[i];
+
+        if (uniqueArray.indexOf(ele) === -1) {
+            uniqueArray.push(ele);
+        }
+    }
+    return uniqueArray
+}
+console.log(unique([1, 23, 2, 4, 5, 1, 23]))
