@@ -2076,19 +2076,42 @@ phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello prep') => true
 phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') => false
 *******************************************************************************/
 
-function phraseFinder(words, phrase) {
-    let splitPhrase = phrase.split(' ')
-    for (var i = 0; i <= splitPhrase.length - 1;i++){
-        if (words.indexOf(splitPhrase[i]) === -1){
-            return false 
-        }
-    }
-    return true 
+// function phraseFinder(words, phrase) {
+//     let splitPhrase = phrase.split(' ')
+//     for (var i = 0; i <= splitPhrase.length - 1;i++){
+//         if (words.indexOf(splitPhrase[i]) === -1){
+//             return false 
+//         }
+//     }
+//     return true 
+// }
+
+
+// console.log(phraseFinder(['world', 'prep', 'hello', 'bootcamp'], 'bootcamp prep'))
+// console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'bootcamp prep'))
+// console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello world'))
+// console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello prep'))
+// console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') )
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function recusionCounter(num){
+//     console.log(num)
+//     let updatedNum = num + 1
+//     if (updatedNum <= 10) recusionCounter(updatedNum)
+// }
+
+// console.log(recusionCounter(1))
+
+function range(x,y){ 
+    let newArr = []
+    let start = x + 1 
+    newArr.push(start)
+    console.log(newArr)
+ 
+    let currentNum = start  
+    if (currentNum < y - 1) range(currentNum, y) 
+    
 }
 
-
-console.log(phraseFinder(['world', 'prep', 'hello', 'bootcamp'], 'bootcamp prep'))
-console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'bootcamp prep'))
-console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello world'))
-console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello prep'))
-console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') )
+console.log(range(2,9))
