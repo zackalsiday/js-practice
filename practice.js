@@ -1898,3 +1898,41 @@ capVowels('boOtCamP PreP'); // => 'bOOtcAmp prEp'
 // console.log(capVowels('hello world')); // => 'hEllO wOrld'
 // console.log(capVowels('HELLO WORLD')); // => 'hEllO wOrld'
 // console.log(capVowels('boOtCamP PreP')); // => 'bOOtcAmp prEp'
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/***********************************************************************
+Write a function `nextTwoPrimes(num)` that takes in a number `num` and
+returns the next two prime numbers greater than `num`.
+Examples:
+nextTwoPrimes(2); // => [ 3, 5 ]
+nextTwoPrimes(3); // => [ 5, 7 ]
+nextTwoPrimes(7); // => [ 11, 13 ]
+nextTwoPrimes(8); // => [ 11, 13 ]
+nextTwoPrimes(20); // => [ 23, 29 ]
+nextTwoPrimes(97); // => [ 101, 103 ]
+***********************************************************************/
+
+// function nextTwoPrimes(num) {
+//     let newArr = []
+//     for (var i = num + 1; newArr.length < 2; i++){
+//         if (isPrime(i)) newArr.push(i)
+//     }
+//     return newArr
+// }
+
+// function isPrime(n){
+//     if (n < 2) return false;
+//     for (var i = 2; i < n; i++){
+//         if (n % i === 0) {
+//             return false 
+//         }
+//     }
+//     return true 
+// }
+
+// console.log(nextTwoPrimes(2)); // => [ 3, 5 ]
+// console.log(nextTwoPrimes(3)); // => [ 5, 7 ]
+// console.log(nextTwoPrimes(7)); // => [ 11, 13 ]
+// console.log(nextTwoPrimes(8)); // => [ 11, 13 ]
+// console.log(nextTwoPrimes(20)); // => [ 23, 29 ]
+// console.log(nextTwoPrimes(97)); // => [ 101, 103 ]
