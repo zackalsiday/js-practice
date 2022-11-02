@@ -1618,19 +1618,118 @@ value in 'obj'.
 // valueCounter(pairs, 'Roman') // => 2
 ***********************************************************************/
 
-function valueCounter(obj, val) {
-    let counter = 0;
-    for (keys in obj){
-        if (obj[keys] === val){
-            counter += 1
-        }
-    }
-    return counter 
-}
+// function valueCounter(obj, val) {
+//     let counter = 0;
+//     for (keys in obj){
+//         if (obj[keys] === val){
+//             counter += 1
+//         }
+//     }
+//     return counter 
+// }
 
-obj1 = {1: 'Anne', 2: 'Alvin', 3: 'Anne', 4: 'Anne'}
-console.log(valueCounter(obj1, 'Anne')) // => 3
-obj2 = {Anne: 50, Alvin: 1, JJ: 100, Roman: 100}
-console.log(valueCounter(obj2, 88)) // => 0
-pairs = {Anne: 'Roman', Alvin: 'Roman', JJ: 'Anne', Roman: 'Anne'}
-console.log(valueCounter(pairs, 'Roman')) // => 2
+// obj1 = {1: 'Anne', 2: 'Alvin', 3: 'Anne', 4: 'Anne'}
+// console.log(valueCounter(obj1, 'Anne')) // => 3
+// obj2 = {Anne: 50, Alvin: 1, JJ: 100, Roman: 100}
+// console.log(valueCounter(obj2, 88)) // => 0
+// pairs = {Anne: 'Roman', Alvin: 'Roman', JJ: 'Anne', Roman: 'Anne'}
+// console.log(valueCounter(pairs, 'Roman')) // => 2
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/***********************************************************************
+Write a function elementCount(array) that returns a object. Each key
+corresponds to an element in the array and the value corresponds to how
+many times that element appears in the array.
+Example:
+elementCount(["a", "a", "b", "b"]); //=> { "a" : 2, "b" : 2 }
+elementCount(['c', 'a', 'c', 'a', 'b']); // => { "c": 2, "a": 2, "b": 1 }
+***********************************************************************/
+
+// function elementCount(array) {
+//     let obj = {};
+//     for (var i = 0; i <= array.length - 1;i++){
+//         if (obj[array[i]] === undefined ) {
+//             obj[array[i]] = 1
+//         }else{
+//             obj[array[i]] += 1
+//         }
+//     }
+//     return obj 
+// }
+
+// console.log(elementCount(["a", "a", "b", "b"])); //=> { "a" : 2, "b" : 2 }
+// console.log(elementCount(['c', 'a', 'c', 'a', 'b'])); // => { "c": 2, "a": 2, "b": 1 }
+
+////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function `titleize(title, stopWords)` that takes in a string
+`title` and an array of strings `stopWords`. Return the `title` where
+every word that does not exist in the `stopWords` array is capitalized;
+all others lowercase.
+Hints: Decompose this problem into helper functions. Perhaps create these,
+- removePunctuation(word)
+- isStopWord(word, stopWords)
+- Test after you write every function of this decomposition!
+- First write a function removePunctuation(word) that takes in a single
+word and returns that same word without any punctuation at the end. Feel
+free to use the punctuation array we've given you below.
+- Second, write a function isStopWord(word, stopWords) that takes in a
+single word and returns true if it is a stop word. The check will vary
+depending on if the word contains punctuation or not, so use your
+removePunctuation function before checking.
+- Use slice
+var punctuation = [";", "!", ".", "?", ",", "-"];
+Examples:
+titleize("forest gump, the runner", ["the"])
+=> "Forest Gump, the Runner"
+titleize("MASTER AND COMMANDER", ["and"])
+=> "Master and Commander"
+titleize("i LOVE; lover of mine", ["love", "of"])
+=> "I love; Lover of Mine"
+titleize("shall we dance?", ["dance"])
+=> "Shall We dance?"
+***********************************************************************/
+
+// function titleize(title, stopWords) {
+//     let splitSent = title.toLowerCase().split(' ');
+//     let newSent = []
+//     for( var i = 0; i <= splitSent.length - 1;i++){
+//         let word = splitSent[i]
+//         if (isStopWord(word, stopWords) === false){
+//         newSent.push(word.charAt(0).toUpperCase() + word.slice(1))
+//         }else{
+//             newSent.push(word)
+//         }
+//     }
+//     return newSent.join(' ')
+// }
+
+// function removePunctuation(word){
+//     var punctuation = [";", "!", ".", "?", ",", "-"];
+//     if (punctuation.indexOf(word[word.length - 1]) != -1){
+//         return word.slice(0,-1)
+//     }
+//     return word 
+// }
+
+// function isStopWord(word, stopWords){
+//     let clearWord = removePunctuation(word)
+//     // console.log(clearWord)
+//     return stopWords.indexOf(clearWord ) != -1
+// }
+
+
+// console.log(titleize("forest gump, the runner", ["the"]))
+// // => "Forest Gump, the Runner"
+// console.log(titleize("MASTER AND COMMANDER", ["and"]))
+// // => "Master and Commander"
+// console.log(titleize("i LOVE; lover of mine", ["love", "of"]))
+// // => "I love; Lover of Mine"
+// console.log(titleize("shall we dance?", ["dance"]))
+// // => "Shall We dance?"
+
+
