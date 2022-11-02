@@ -1952,22 +1952,66 @@ pairProduct([1,2,3,4,5], 8); //=> [ [ 1, 3 ] ]
 pairProduct([1, 2, 3, 12, 8], 24); //=> [ [ 1, 3 ], [ 2, 4 ] ]
 ***********************************************************************/
 
-function pairProduct(arr, num) {
-    let newArr = [];
-    let a = 0;
-    while (a <= arr.length - 2){
-        b = a + 1
-        while (b <= arr.length -1){
-            if ((arr[a] * arr[b]) === num ){
-                newArr.push([a,b])
-            }
-            b += 1
-        }
-        a += 1
-    }
-    return newArr 
-}
+// function pairProduct(arr, num) {
+//     let newArr = [];
+//     let a = 0;
+//     while (a <= arr.length - 2){
+//         b = a + 1
+//         while (b <= arr.length -1){
+//             if ((arr[a] * arr[b]) === num ){
+//                 newArr.push([a,b])
+//             }
+//             b += 1
+//         }
+//         a += 1
+//     }
+//     return newArr 
+// }
 
-console.log(pairProduct([1, 2, 3, 4, 5], 4)); //=> [ [ 0, 3 ] ]
-console.log(pairProduct([1, 2, 3, 4, 5], 8)); //=> [ [ 1, 3 ] ]
-console.log(pairProduct([1, 2, 3, 12, 8], 24)); //=> [ [ 1, 3 ], [ 2, 4 ] ]
+// console.log(pairProduct([1, 2, 3, 4, 5], 4)); //=> [ [ 0, 3 ] ]
+// console.log(pairProduct([1, 2, 3, 4, 5], 8)); //=> [ [ 1, 3 ] ]
+// console.log(pairProduct([1, 2, 3, 12, 8], 24)); //=> [ [ 1, 3 ], [ 2, 4 ] ]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/***********************************************************************
+Write a function twoDimensionalSize(array) that takes in a 2D-array as
+an argument. The function should return the total number of elements in
+the 2D-array.
+Examples:
+var arr1 = [
+  [1, 2, 3],
+  [4, 5],
+  [6, 7, 8, 9]
+];
+twoDimensionalSize(arr1); // => 9
+var arr2 = [
+  ['a'],
+  ['b', 'c', 'd', 'e']
+];
+twoDimensionalSize(arr2); // => 5
+***********************************************************************/
+
+// function twoDimensionalSize(array) {
+//     let total = 0;
+//     for (var i = 0; i <= array.length - 1; i++){
+//         total += array[i].length 
+//     }
+//     return total 
+// }
+
+// var arr1 = [
+//     [1, 2, 3],
+//     [4, 5],
+//     [6, 7, 8, 9]
+// ];
+// console.log(twoDimensionalSize(arr1)); // => 9
+// var arr2 = [
+//     ['a'],
+//     ['b', 'c', 'd', 'e']
+// ];
+// console.log(twoDimensionalSize(arr2)); // => 5
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
