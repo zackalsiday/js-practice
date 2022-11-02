@@ -1762,16 +1762,63 @@ titleize("shall we dance?", ["dance"])
 //
 // unique([1,23,2,4,5,1,23]) //=> [1, 23, 2, 4, 5];
 
-function unique(array) {
-    var uniqueArray = [];
+// function unique(array) {
+//     var uniqueArray = [];
 
-    for (var i = 0; i <= array.length -1; i += 1) {
-        var ele = array[i];
+//     for (var i = 0; i <= array.length -1; i += 1) {
+//         var ele = array[i];
 
-        if (uniqueArray.indexOf(ele) === -1) {
-            uniqueArray.push(ele);
+//         if (uniqueArray.indexOf(ele) === -1) {
+//             uniqueArray.push(ele);
+//         }
+//     }
+//     return uniqueArray
+// }
+// console.log(unique([1, 23, 2, 4, 5, 1, 23]))
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// Debug this function below so it passes mocha
+
+// Examples:
+//
+var people = [
+  { happiness : 15},
+  { happiness : 13},
+  { happiness : 3},
+  { happiness : 20},
+  { happiness : 9},
+  { happiness : 7},
+  { happiness : 17},
+  { happiness : 1}
+];
+
+console.log(isHappyGroup(people)) //=> true;
+
+function isHappy(person) {
+    if (person.happiness > 5) {
+        return true;
+    }
+    return false;
+}
+
+function isHappyGroup(group) {
+    var amount = 0;
+
+    for (var i = 0; i <= group.length - 1; i += 1) {
+        var person = group[i];
+
+        if (isHappy(person)) {
+            amount += 1;
         }
     }
-    return uniqueArray
+
+    if (amount > 5) {
+        return true;
+    }
+
+    return false;
 }
-console.log(unique([1, 23, 2, 4, 5, 1, 23]))
+
+
+
