@@ -2331,13 +2331,46 @@ greatestCommonFactor(16, 24) => 8
 greatestCommonFactor(7, 11) => 1
 *******************************************************************************/
 
-function greatestCommonFactor(num1, num2) {
-    let start = Math.min(num1, num2)
-    for (var i = start; i > 0; i--){
-        if (num1 % i === 0 && num2 % i === 0) return i
+// function greatestCommonFactor(num1, num2) {
+//     let start = Math.min(num1, num2)
+//     for (var i = start; i > 0; i--){
+//         if (num1 % i === 0 && num2 % i === 0) return i
+//     }
+// }
+
+// console.log(greatestCommonFactor(15, 25))
+// console.log(greatestCommonFactor(16, 24))
+// console.log(greatestCommonFactor(7, 11)) 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function valueConcat(array, obj) that takes in an array and object
+The function should return a new array where each element is concatenated with
+it's corresponding value from the object.
+
+Examples:
+
+valueConcat(['alex', 'maurice', 'meagan', 'ali'], {alex: 'bronca', ali: 'harris'})
+=> [ 'alexbronca', 'maurice', 'meagan', 'aliharris' ]
+
+valueConcat(['a', 'b', 'c'], {b: 2, c: 3})
+=> [ 'a', 'b2', 'c3' ]
+*******************************************************************************/
+
+function valueConcat(array, obj) {
+    let final = [];
+    for (let i = 0; i <= array.length - 1;i++){
+      if(obj[array[i]]){
+        final.push(array[i] + obj[array[i]])
+      }else[
+        final.push(array[i])
+      ]
     }
+    return final 
 }
 
-console.log(greatestCommonFactor(15, 25))
-console.log(greatestCommonFactor(16, 24))
-console.log(greatestCommonFactor(7, 11)) 
+console.log(valueConcat(['a', 'b', 'c'], { b: 2, c: 3 }))
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
