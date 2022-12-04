@@ -2358,19 +2358,45 @@ valueConcat(['a', 'b', 'c'], {b: 2, c: 3})
 => [ 'a', 'b2', 'c3' ]
 *******************************************************************************/
 
-function valueConcat(array, obj) {
-    let final = [];
-    for (let i = 0; i <= array.length - 1;i++){
-      if(obj[array[i]]){
-        final.push(array[i] + obj[array[i]])
-      }else[
-        final.push(array[i])
-      ]
-    }
-    return final 
-}
+// function valueConcat(array, obj) {
+//     let final = [];
+//     for (let i = 0; i <= array.length - 1;i++){
+//       if(obj[array[i]]){
+//         final.push(array[i] + obj[array[i]])
+//       }else[
+//         final.push(array[i])
+//       ]
+//     }
+//     return final 
+// }
 
-console.log(valueConcat(['a', 'b', 'c'], { b: 2, c: 3 }))
+// console.log(valueConcat(['a', 'b', 'c'], { b: 2, c: 3 }))
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*******************************************************************************
+Write a function hipsterfyWord(word) that takes takes in a string and returns
+the string with the last vowel removed. 'y' is not a vowel.
+
+Examples:
+
+hipsterfyWord('proper') => 'propr'
+hipsterfyWord('tonic') => 'tonc'
+hipsterfyWord('PANTHER') => 'PANTHR'
+hipsterfyWord('BACKWARDS') => 'BACKWRDS'
+*******************************************************************************/
+
+function hipsterfyWord(word) {
+  let vowels = 'aeiouAEIOU'.split('')
+  for(let i = word.length - 1; i >= 0; i--){
+    let char = word[i]
+    if (vowels.includes(char)){
+      return word.slice(0,i) + word.slice(i + 1)
+    }
+  }
+}
+
+console.log(hipsterfyWord('BACKWARDS'))
+
+/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
