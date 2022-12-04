@@ -2386,17 +2386,51 @@ hipsterfyWord('PANTHER') => 'PANTHR'
 hipsterfyWord('BACKWARDS') => 'BACKWRDS'
 *******************************************************************************/
 
-function hipsterfyWord(word) {
-  let vowels = 'aeiouAEIOU'.split('')
-  for(let i = word.length - 1; i >= 0; i--){
-    let char = word[i]
-    if (vowels.includes(char)){
-      return word.slice(0,i) + word.slice(i + 1)
-    }
-  }
-}
+// function hipsterfyWord(word) {
+//   let vowels = 'aeiouAEIOU'.split('')
+//   for(let i = word.length - 1; i >= 0; i--){
+//     let char = word[i]
+//     if (vowels.includes(char)){
+//       return word.slice(0,i) + word.slice(i + 1)
+//     }
+//   }
+// }
 
-console.log(hipsterfyWord('BACKWARDS'))
+// console.log(hipsterfyWord('BACKWARDS'))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
+/***********************************************************************
+Write a function `objectSize(obj)` that takes in an object and returns
+the number of key-value pairs in the object.
+Examples:
+var obj1 = {
+  name: 'Fido',
+  age: '4'
+}
+objectSize(obj1); // => 2
+var obj2 = {
+  name: 'App Academy',
+  course: 'Bootcamp Prep',
+  locations: ['SF', 'NY']
+}
+objectSize(obj2); // => 3
+***********************************************************************/
+
+function objectSize(obj) {
+  let counter = 0;
+  for (keys in obj){
+    counter += 1
+  }
+  return counter 
+}
+
+var obj2 = {
+  name: 'App Academy',
+  course: 'Bootcamp Prep',
+  locations: ['SF', 'NY']
+}
+
+console.log(objectSize(obj2))
+
+/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
