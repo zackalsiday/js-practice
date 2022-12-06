@@ -2417,20 +2417,20 @@ var obj2 = {
 objectSize(obj2); // => 3
 ***********************************************************************/
 
-function objectSize(obj) {
-  let counter = 0;
-  for (keys in obj){
-    counter += 1
-  }
-  return counter 
-}
+// function objectSize(obj) {
+//   let counter = 0;
+//   for (keys in obj){
+//     counter += 1
+//   }
+//   return counter 
+// }
 
-var obj2 = {
-  name: 'App Academy',
-  course: 'Bootcamp Prep',
-  locations: ['SF', 'NY']
-}
+// var obj2 = {
+//   name: 'App Academy',
+//   course: 'Bootcamp Prep',
+//   locations: ['SF', 'NY']
+// }
 
-console.log(objectSize(obj2))
+// console.log(objectSize(obj2))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
