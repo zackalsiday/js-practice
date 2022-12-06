@@ -2386,17 +2386,17 @@ hipsterfyWord('PANTHER') => 'PANTHR'
 hipsterfyWord('BACKWARDS') => 'BACKWRDS'
 *******************************************************************************/
 
-// function hipsterfyWord(word) {
-//   let vowels = 'aeiouAEIOU'.split('')
-//   for(let i = word.length - 1; i >= 0; i--){
-//     let char = word[i]
-//     if (vowels.includes(char)){
-//       return word.slice(0,i) + word.slice(i + 1)
-//     }
-//   }
-// }
+function hipsterfyWord(word) {
+  let vowels = 'aeiouAEIOU'.split('')
+  for(let i = word.length - 1; i >= 0; i--){
+    let char = word[i]
+    if (vowels.includes(char)){
+      return word.slice(0,i) + word.slice(i + 1)
+    }
+  }
+}
 
-// console.log(hipsterfyWord('BACKWARDS'))
+console.log(hipsterfyWord('BACKWARDS'))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
